@@ -11,6 +11,7 @@ This app, and the [API](https://github.com/fitebone/pair-api), was derived from 
 - See data transfer progress real time
 
 ## Screenshots
+<img src="screenshots/feed.png" alt="Pair Feed" style="width:200px;"/> <img src="screenshots/account.png" alt="Account Image" style="width:200px;"/> <img src="screenshots/edit_account.png" alt="Edit Account Image" style="width:200px;"/> <img src="screenshots/peers.png" alt="Peers Image" style="width:200px;"/> <img src="screenshots/initiator.png" alt="Initiator Image" style="width:200px;"/> <img src="screenshots/receiver.jpg" alt="Receiver Image" style="width:200px;"/> <img src="screenshots/progress.png" alt="Progress Image" style="width:200px;"/> <img src="screenshots/complete.png" alt="Complete Image" style="width:200px;"/> <img src="screenshots/cards.png" alt="Cards Image" style="width:200px;"/> 
 
 ## License
 GPL-3.0 License. See `LICENSE.txt` for more information.

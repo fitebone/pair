@@ -2,7 +2,7 @@
 **An Android app that sends data without an internet connection**
 
 ## Overview
-This app, and the [API](https://github.com/fitebone/pair-api), was derived from my university capstone project for my BSCS. It sends data using WiFi LAN, BLE, and other mediums via the Google Nearby Connections platform. I have found this platform to be suitable only for Android development and aspire to develop my own alternative in the near future. This version of the app does not use the API designed for it, as its intent is to execute fully offline.
+This app, and the [API](https://github.com/fitebone/pair-api), was derived from my university capstone project for my BSCS. It sends data using WiFi LAN, BLE, and other mediums via the Google Nearby Connections platform. I have found this platform to be suitable only for Android development and aspire to develop my own alternative in the near future. This version of the app does not use the API designed for it. The app is now intended to execute while fully offline.
 
 ## Features
 - Create a "card" that represents your identity

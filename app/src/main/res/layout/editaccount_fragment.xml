@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"/>
+
+    <TextView
+        android:id="@+id/edit_name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="Name"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="25dp"/>
+
+    <EditText
+        android:id="@+id/edit_name_edittext"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@id/edit_name_text"
+        app:layout_constraintTop_toTopOf="@id/edit_name_text"
+        app:layout_constraintBottom_toBottomOf="@id/edit_name_text"/>
+
+    <TextView
+        android:id="@+id/edit_image_text"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="Image"
+        android:textSize="20sp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/edit_image_image"
+        app:layout_constraintBottom_toBottomOf="@id/edit_image_image"/>
+
+    <ImageView
+        android:id="@+id/edit_image_image"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:layout_constraintStart_toEndOf="@id/edit_image_text"
+        app:layout_constraintTop_toBottomOf="@id/edit_name_text"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="50dp"
+        android:padding="5dp"
+        android:src="@drawable/ic_camera"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/edit_image_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/edit_image_image"
+        app:layout_constraintTop_toTopOf="@id/edit_image_image"
+        app:layout_constraintBottom_toBottomOf="@id/edit_image_image"
+        android:layout_marginStart="40dp"
+        android:text="Browse"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/edit_apply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_image_image"
+        android:layout_marginTop="40dp"
+        android:text="Apply"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

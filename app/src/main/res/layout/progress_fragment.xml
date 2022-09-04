@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include
+        android:id="@+id/progress_toolbar"
+        layout="@layout/toolbar"/>
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/progress_circular"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/progress_toolbar"
+        android:layout_marginTop="60dp"
+        app:trackThickness="10dp"
+        app:trackCornerRadius="3dp"
+        app:indicatorSize="180dp"
+        android:indeterminate="false"
+        />
+
+    <TextView
+        android:id="@+id/progress_percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/progress_circular"
+        app:layout_constraintEnd_toEndOf="@id/progress_circular"
+        app:layout_constraintTop_toTopOf="@id/progress_circular"
+        app:layout_constraintBottom_toBottomOf="@id/progress_circular"
+        android:textSize="40dp"
+        android:text="0%"/>
+
+    <TextView
+        android:id="@+id/progress_bytes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/progress_circular"
+        android:text="0B/0B"
+        android:textSize="12dp"/>
+
+    <TextView
+        android:id="@+id/progress_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/progress_bytes"
+        android:layout_marginTop="25dp"
+        android:text="Swapping data..."
+        android:textSize="24dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/progress_button_view_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/progress_message"
+        android:layout_marginTop="50dp"
+        android:text="View New Card"
+        android:textSize="18dp"
+        android:visibility="gone"
+        android:paddingVertical="10dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/progress_button_peers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/progress_button_view_card"
+        android:layout_marginTop="20dp"
+        android:text="Back to Peers"
+        android:textSize="18dp"
+        android:visibility="gone"
+        android:paddingVertical="10dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

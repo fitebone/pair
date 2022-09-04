@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splash">
+
+    <fragment
+        android:id="@+id/drop"
+        android:name="com.example.pair.ui.main.DropFragment"
+        android:label="DropFragment" />
+    <fragment
+        android:id="@+id/swap"
+        android:name="com.example.pair.ui.swap.SwapFragment"
+        android:label="swap_fragment"
+        tools:layout="@layout/swap_fragment">
+        <action
+            android:id="@+id/action_pair_to_peers"
+            app:destination="@id/peers" />
+    </fragment>
+    <fragment
+        android:id="@+id/peers"
+        android:name="com.example.pair.ui.swap.SwapPeersFragment"
+        android:label="peers_fragment"
+        tools:layout="@layout/swap_peers_fragment" >
+        <action
+            android:id="@+id/action_peers_to_progress"
+            app:destination="@id/progress" />
+    </fragment>
+    <fragment
+        android:id="@+id/account"
+        android:name="com.example.pair.ui.card.AccountFragment"
+        android:label="account_fragment"
+        tools:layout="@layout/account_fragment" >
+        <action
+            android:id="@+id/action_account_to_editAccountFragment"
+            app:destination="@id/editAccount" />
+    </fragment>
+    <fragment
+        android:id="@+id/settings"
+        android:name="com.example.pair.ui.main.SettingsFragment"
+        android:label="settings_fragment"
+        tools:layout="@layout/settings_fragment" />
+    <fragment
+        android:id="@+id/editAccount"
+        android:name="com.example.pair.ui.card.EditAccountFragment"
+        android:label="EditAccountFragment" >
+        <action
+            android:id="@+id/action_editAccount_to_account"
+            app:popUpTo="@id/swap"
+            app:destination="@id/account" />
+    </fragment>
+    <fragment
+        android:id="@+id/splash"
+        android:name="com.example.pair.ui.main.SplashFragment"
+        android:label="splash_fragment"
+        tools:layout="@layout/splash_fragment" >
+        <action
+            android:id="@+id/action_splash_to_swap"
+            app:destination="@id/swap"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left" />
+        <action
+            android:id="@+id/action_splash_to_createAccountFragment"
+            app:destination="@id/createAccountFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cards"
+        android:name="com.example.pair.ui.card.CardsFragment"
+        android:label="cards_fragment"
+        tools:layout="@layout/cards_fragment" />
+    <fragment
+        android:id="@+id/createAccountFragment"
+        android:name="com.example.pair.ui.card.CreateAccountFragment"
+        android:label="create_account_fragment"
+        tools:layout="@layout/create_account_fragment" >
+        <action
+            android:id="@+id/action_createAccountFragment_to_swap"
+            app:destination="@id/swap" />
+    </fragment>
+    <fragment
+        android:id="@+id/progress"
+        android:name="com.example.pair.ui.swap.ProgressFragment"
+        android:label="progress" >
+        <argument
+            android:name="endpointID"
+            app:argType="string" />
+    </fragment>
+
+</navigation>
